@@ -16,7 +16,7 @@ function loadMap(campaign) {
                 level.forEach(layer => {
                     layer.forEach(line => {
                         let cells = line.split('#');
-                        cells.forEach(cell,pos => {
+                        cells.forEach((cell,pos) => {
                             if(!tiles.tilesPrefabs[cell]){
                             tiles.tilesPrefabs[cell] = campaign.settings.tiles.tilesPrefabs.find(prefab => {
                                 return prefab.name === cell;
