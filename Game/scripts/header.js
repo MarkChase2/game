@@ -115,5 +115,6 @@ campaignPromise.then((value) => {
     campaign = value
     console.log('ulfkcn euh');
 });
+console.log('aaaaaaaaaaaaaaaa');
 console.log(campaign);
 var player;
