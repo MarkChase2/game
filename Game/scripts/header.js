@@ -101,7 +101,7 @@ function processImage(image) {
 //function to load JSONs
 async function loadJSON(name) {
     NJSONs++;
-    const response = await fetch('../mods/default/default.json');
+    const response = await fetch(name);
     const jsonObject = await response.json();
     return jsonObject;
 }
