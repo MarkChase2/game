@@ -43,6 +43,7 @@ function loadImage(imgPath, callBack) {
 
     //create a image for be a buffer
     var bufferImg = new Image();
+    bufferImg.crossOrigin = "Anonymous";
     bufferImg.src = imgPath;
 
     // when load the image... 
