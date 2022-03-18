@@ -11,7 +11,7 @@ function loadMap(campaign) {
     }
 
     stages.forEach(stage => {
-        console.log(stage + '\n');
+        // console.log(stage + '\n');
         stage.forEach(level => {
                 level.forEach(layer => {
                     layer.forEach(line => {
