@@ -48,7 +48,11 @@ function updatePlayer(player, ctx) {
     // save the context, scale it, draw the current player frame and restore
     ctx.save();
     ctx.scale(2, 2);
-    ctx.drawImage(player.spriteSheet, player.x, player.y,1,1,player.frames[player.currFrame]);
+    ctx.drawImage(player.spriteSheet, player.x, player.y,1,1,
+    player.frames[player.currFrame][0],
+    player.frames[player.currFrame][1],
+    player.frames[player.currFrame][2],
+    player.frames[player.currFrame][3]);
     ctx.restore();
     // player.x += player.dx;
     // player.y += player.dy;
