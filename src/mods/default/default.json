@@ -248,6 +248,19 @@
             ]
         ],
     "settings": {
+        "tiles": {
+        "spriteSheets": [
+            "/MarkChase2/game/main/src/mods/default/images/floor.bmp"
+        ],
+        "tilesPrefabs":[
+        {
+            "name": "aaa",
+            "type": "floor",
+            "sprite": [0,0,16,16]
+        }
+    ]   
+        },
+        
         "player": {
             "speed": 2,
             "sprites": {
