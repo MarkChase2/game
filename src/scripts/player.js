@@ -61,16 +61,16 @@ function updatePlayer(player, ctx) {
     // player.x += player.dx;
     // player.y += player.dy;
     // player movement
-    if (keys['w'] === true) {
+    if (keys['w'] && player.y>16+player.spd) {
         player.y -= player.spd;
     }
-    if (keys['s'] === true) {
+    if (keys['s'] && player.y<ctx.canvas.height-16-player.spd) {
         player.y += player.spd;
     }
-    if (keys['a'] === true) {
+    if (keys['a'] && player.x>16+player.spd) {
         player.x -= player.spd;
     }
-    if (keys['d'] === true) {
+    if (keys['d'] && player.x<ctx.canvas.width-16-player.spd) {
         player.x += player.spd;
     }
     // console.log('dlkjasrnggtreh');
