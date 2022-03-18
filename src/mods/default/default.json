@@ -255,7 +255,7 @@
         "player": {
             "speed": 2,
             "sprites": {
-                "spritesSheet": "/MarkChase2/game/main/src/mods/default/images/player1.bmp",
+                "spriteSheet": "/MarkChase2/game/main/src/mods/default/images/player1.bmp",
                 "idle": [0,0,16,16]
             }
         }
