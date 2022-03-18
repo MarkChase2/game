@@ -108,7 +108,7 @@ async function loadJSON(name) {
 
 // load the campaign
 
-var campaignPromise = loadJSON('/Game/mods/default/default.json'),
+var campaignPromise = loadJSON('MarkChase2/game/Game/mods/default/default.json'),
     campaign;
 campaignPromise.then((value) => {
     NJSONsLoaded++;
