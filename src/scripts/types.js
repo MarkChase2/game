@@ -1,3 +1,4 @@
+//campaign types
 /**
  * @typedef {Array<string>} JSONLayer
  * @typedef {Array<JSONLayer>} JSONLevel
@@ -20,4 +21,9 @@
  * @typedef {Object} JSONCampaign
  * @property {JSONSettings} settings
  * @property {JSONStages} stages
+ */
+
+//Map Loader Types 
+/**
+ * @t
  */
