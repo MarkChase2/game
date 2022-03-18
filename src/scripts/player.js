@@ -45,7 +45,7 @@ function createPlayer(x, y, campaign) {
 }
 
 function updatePlayer(player, ctx) {
-    // console.log(player.x);
+    console.log(player.x);
     // save the context, scale it, draw the current player frame and restore
     ctx.save();
     ctx.scale(2, 2);
