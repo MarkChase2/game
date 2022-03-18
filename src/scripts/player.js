@@ -61,16 +61,16 @@ function updatePlayer(player, ctx) {
     // player.x += player.dx;
     // player.y += player.dy;
     // player movement
-    if (keys['w'] && player.y>32+player.spd) {
+    if (keys['w'] && player.y>16+player.spd) {
         player.y -= player.spd;
     }
-    if (keys['s'] && player.y+player.frames[player.currFrame][3]*2<ctx.canvas.height/2-(32+player.spd)) {
+    if (keys['s'] && player.y+player.frames[player.currFrame][3]*2<ctx.canvas.height/2-(16+player.spd)) {
         player.y += player.spd;
     }
-    if (keys['a'] && player.x>32+player.spd) {
+    if (keys['a'] && player.x>16+player.spd) {
         player.x -= player.spd;
     }
-    if (keys['d'] && player.x+player.frames[player.currFrame][2]*2<ctx.canvas.width/2-(32+player.spd)) {
+    if (keys['d'] && player.x+player.frames[player.currFrame][2]*2<ctx.canvas.width/2-(16+player.spd)) {
         player.x += player.spd;
     }
     // console.log('dlkjasrnggtreh');
