@@ -108,7 +108,7 @@ async function loadJSON(name) {
 
 // load the campaign
 
-var campaignPromise = loadJSON('../src/mods/default/default.json'),
+var campaignPromise = loadJSON('/src/mods/default/default.json'),
     campaign;
 campaignPromise.then((value) => {
     NJSONsLoaded++;
