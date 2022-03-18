@@ -64,13 +64,13 @@ function updatePlayer(player, ctx) {
     if (keys['w'] && player.y>16+player.spd) {
         player.y -= player.spd;
     }
-    if (keys['s'] && player.y<ctx.canvas.height-16-player.spd) {
+    if (keys['s'] && player.y<ctx.canvas.height-(16+player.spd)) {
         player.y += player.spd;
     }
     if (keys['a'] && player.x>16+player.spd) {
         player.x -= player.spd;
     }
-    if (keys['d'] && player.x<ctx.canvas.width-16-player.spd) {
+    if (keys['d'] && player.x<ctx.canvas.width-(16+player.spd)) {
         player.x += player.spd;
     }
     // console.log('dlkjasrnggtreh');
