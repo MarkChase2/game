@@ -1,10 +1,17 @@
 // start
 function start() {
-    //create the player
+    //verify if all jsons were loaded
     if (NJSONs === NJSONsLoaded) {
+        //create the player
         player = createPlayer(50, 50, campaign);
+
+        //load the map
+        mapLoader = loadMap(campaign);
+        
+        //sinalize the game can start because all was loaded and created
         started = true;
     } else {
+        // if some jsons were not loaded, call the start function in the next frame
         window.requestAnimationFrame(start);
     }
 }

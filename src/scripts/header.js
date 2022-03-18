@@ -1,15 +1,15 @@
 // initialize some util variables
-var NImages = 0,
+let NImages = 0,
     NImagesLoaded = 0;
-var NJSONs = 0,
+let NJSONs = 0,
     NJSONsLoaded = 0;
-var started = false;
+let started = false;
 const gameWidth = 640,
     gameHeight = 360;
 const gameScale = Math.min(Math.trunc(window.innerWidth / gameWidth), Math.trunc(window.innerHeight / gameHeight));
 
 //initialize the canvas and ctx
-var gameCanvas = document.getElementById('gameCanvas');
+let gameCanvas = document.getElementById('gameCanvas');
 gameCanvas.width = gameWidth;
 gameCanvas.height = gameHeight;
 gameCanvas.style.width = gameScale * gameWidth + 'px';
@@ -18,11 +18,11 @@ gameCanvas.style.height = gameScale * gameHeight + 'px';
 // get the blank space 
 gameCanvas.style.left = ((window.innerWidth - gameScale * gameWidth) / 2) + 'px';
 console.log(window.getComputedStyle(gameCanvas).left);
-var ctx = gameCanvas.getContext('2d');
+let ctx = gameCanvas.getContext('2d');
 ctx.imageSmoothingEnabled = false;
 
 //config the keys obj for always has the current keys pressed (fail for multiple DOMs)
-var keys = {};
+let keys = {};
 window.addEventListener("keydown",
     function(e) {
         keys[e.key] = true;
@@ -42,7 +42,7 @@ function loadImage(imgPath, callBack) {
     NImages++;
 
     //create a image for be a buffer
-    var bufferImg = new Image();
+    let bufferImg = new Image();
     bufferImg.crossOrigin = "Anonymous";
     bufferImg.src = imgPath;
 
@@ -61,23 +61,23 @@ function loadImage(imgPath, callBack) {
 function processImage(image) {
 
     //create a canvas for be a buffer and config it
-    var canvasBuf = document.createElement('canvas')
+    let canvasBuf = document.createElement('canvas')
     canvasBuf.width = image.width;
     canvasBuf.height = image.height;
 
     //create a context for the buffer canvas
-    var contextBuf = canvasBuf.getContext('2d');
+    let contextBuf = canvasBuf.getContext('2d');
 
     //draw the image on the canvas
     contextBuf.drawImage(image, 0, 0);
 
     //get all the pixel colors on the buffer canvas
-    var imageData = contextBuf.getImageData(0, 0, canvasBuf.width, canvasBuf.height);
-    var data = imageData.data;
+    let imageData = contextBuf.getImageData(0, 0, canvasBuf.width, canvasBuf.height);
+    let data = imageData.data;
 
     //for each pixel on the canvas ( that maps directly to the image ), verify if it's color is rgb(255,0,255), if is, turn it transparent
     for (let pixel = 0; pixel < data.length / 4; pixel++) {
-        var r = data[pixel * 4],
+        let r = data[pixel * 4],
             g = data[pixel * 4 + 1],
             b = data[pixel * 4 + 2];
         if (r === 255 && g === 0 && b === 255) {
@@ -109,13 +109,13 @@ async function loadJSON(name) {
 
 // load the campaign
 
-var campaignPromise = loadJSON('/MarkChase2/game/main/src/mods/default/default.json'),
+let campaignPromise = loadJSON('/MarkChase2/game/main/src/mods/default/default.json'),
     campaign;
 campaignPromise.then((value) => {
     NJSONsLoaded++;
     campaign = value
     console.log('ulfkcn euh');
 });
-console.log('aaaaaaaaaaaaaaaa');
 console.log(campaign);
-var player;
+let player;
+let mapLoader;
